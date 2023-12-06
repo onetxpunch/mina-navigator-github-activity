@@ -43,6 +43,7 @@ export default function Home({ params }: { params: { user: string } }) {
             // console.log(x.nodes);
             return (
               <>
+                {/* @ts-ignore */}
                 {x.nodes?.map((x, i) => {
                   console.log(x);
                   return (

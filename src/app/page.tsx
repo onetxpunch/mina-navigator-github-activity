@@ -56,12 +56,15 @@ export default function Home() {
       <div className="text-2xl">Recently Active Navigators</div>
       <div className="flex gap-4 text-white">
         {r2.map((x) => {
+          // @ts-ignore
           return (
             <Link
               key={x}
+              // @ts-ignore
               href={`/activity/${x.owner.login}`}
               className="text-black hover:text-yellow-900"
             >
+              {/* @ts-ignore */}
               {x.owner.login}
             </Link>
           );
@@ -71,13 +74,17 @@ export default function Home() {
       <div className="flex flex-col gap-3">
         {r2?.map((x, i) => {
           console.log(x);
+          // @ts-ignore
           return (
             <a
               key={i}
+              // @ts-ignore
               href={x.url}
               className="hover:text-yellow-900 visited:text-orange-950"
             >
+              {/* @ts-ignore */}
               <div>{x.nameWithOwner}</div>
+              {/* @ts-ignore */}
               <div>{x.description}</div>
             </a>
           );
